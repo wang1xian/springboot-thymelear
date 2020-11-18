@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <table width="200" style="text-align: center">
+        <tr>
+            <th>编号</th>
+            <th>年龄</th>
+            <th>index</th>
+            <th>size</th>
+            <th>current</th>
+            <th>even</th>
+            <th>odd</th>
+            <th>first</th>
+            <th>last</th>
+
+        </tr>
+        <tr th:each="user,iterStat:${list}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.age}"></td>
+            <td th:text="${iterStat.count}"></td>
+            <td th:text="${iterStat.size}"></td>
+            <td th:text="${iterStat.current}"></td>
+            <td th:text="${iterStat.even}"></td>
+            <td th:text="${iterStat.odd}"></td>
+            <td th:text="${iterStat.first}"></td>
+            <td th:text="${iterStat.last}"></td>
+        </tr>
+
+
+    </table>
+
+</body>
+</html>

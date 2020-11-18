@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- th:if 条件成立就显示 -->
+<h1 th:if="${flag=='yes'}">中公教育</h1>
+<!-- th:unless 条件不成立就显示 -->
+<h1 th:unless="${flag=='no'}">优就业</h1>
+<!-- switch选择语句 -->
+<div th:switch="${menu}">
+    <p th:case="admin">user is </p>
+    <p th:case="${magger}">User is</p>
+</div>
+
+</body>
+</html>
